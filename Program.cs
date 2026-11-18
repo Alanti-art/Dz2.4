@@ -14,7 +14,7 @@ namespace Dz4
     internal class Program
     {
         static Player player;
-        static Enemy enemy;
+        static Eminen enemy;
         static float tick;
         static CancellationTokenSource token;
 
@@ -230,7 +230,7 @@ namespace Dz4
             File.WriteAllText(gameSaveFile, string.Empty);
 
             player = new Player(100, false);
-            enemy = new Enemy(300, false);
+            enemy = new Eminen(300, false);
             tick = 0;
 
             Console.WriteLine("История боя очищена. Новая игра начата.");
@@ -250,7 +250,7 @@ namespace Dz4
                 tick = int.Parse(lines[2]);
 
                 player = new Player(playerCurHp, playerCurHp <= 0);
-                enemy = new Enemy(enemyCurHp, enemyCurHp <= 0);
+                enemy = new Eminen(enemyCurHp, enemyCurHp <= 0);
 
                 Console.WriteLine($"Игра загружена. Игрок HP: {player.CurHp}, Враг HP: {enemy.CurHp}, Время: {tick} сек");
 
