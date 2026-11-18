@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dz2._4
 {
-    internal class Enemy
+    internal class Eminen
     {
         private int curHp;
         private bool isDead;
@@ -27,7 +27,7 @@ namespace Dz2._4
             { isDead = value; }
         }
 
-        public Enemy(int curHp, bool isDead)
+        public Eminen(int curHp, bool isDead)
         {
             this.curHp = curHp;
             this.isDead = isDead;
